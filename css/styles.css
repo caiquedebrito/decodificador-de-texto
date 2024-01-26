@@ -171,3 +171,14 @@ button {
 
   margin-bottom: 1rem;
 }
+
+.hidden {
+  display: none !important;
+}
+
+.alert {
+  font-size: 1.5rem !important;
+  color: red !important;
+
+  transition: all 0.5s ease-in-out !important;
+}
