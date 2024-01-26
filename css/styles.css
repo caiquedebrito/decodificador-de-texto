@@ -145,6 +145,11 @@ button {
   text-align: center;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 #button-container {
   display: flex;
   gap: 24px;
@@ -170,6 +175,7 @@ button {
   gap: 8px;
 
   margin-bottom: 1rem;
+  transition: all 0.5s ease-in-out !important;
 }
 
 .hidden {
@@ -179,6 +185,8 @@ button {
 .alert {
   font-size: 1.5rem !important;
   color: red !important;
+}
 
-  transition: all 0.5s ease-in-out !important;
+.alert > img {
+  height: 30px;
 }

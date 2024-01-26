@@ -7,6 +7,7 @@ const resultWarning = document.querySelector('#result-warning');
 const warning = document.querySelector('#warning');
 
 const encryptButton = document.querySelector('#encrypt-button');
+const decryptButton = document.querySelector('#decrypt-button');
 
 encryptButton.addEventListener('click', () => {
     const text = textField.value;
@@ -24,8 +25,20 @@ encryptButton.addEventListener('click', () => {
     resultWarning.classList.add('hidden');
 })
 
+textField.addEventListener('input', (event) => {
+  if (isInvalid(event.target.value)) {
+    warning.classList.add('alert');
+    encryptButton.disabled = true;
+    decryptButton.disabled = true;
+  } else {
+    warning.classList.remove('alert');
+    encryptButton.disabled = false;
+    decryptButton.disabled = false;
+  }
+});
+
 const isInvalid = (text) => {
-  return /[\W A-Z]/.test(text.split(' ').join(''));
+  return /[\W A-Z \d]/.test(text.split(' ').join(''));
 }
 
 const encryptKeys = {
