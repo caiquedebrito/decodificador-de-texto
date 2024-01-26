@@ -9,6 +9,8 @@ const warning = document.querySelector('#warning');
 const encryptButton = document.querySelector('#encrypt-button');
 const decryptButton = document.querySelector('#decrypt-button');
 
+const copyButton = document.querySelector('#copy-button');
+
 encryptButton.addEventListener('click', () => {
     const text = textField.value;
 
@@ -39,6 +41,12 @@ decryptButton.addEventListener('click', () => {
   textResult.textContent = decryptedText;
   resultContainer.classList.remove('hidden');
   resultWarning.classList.add('hidden');
+})
+
+copyButton.addEventListener('click', () => {
+  const text = textResult.textContent;
+
+  navigator.clipboard.writeText(text);
 })
 
 textField.addEventListener('input', (event) => {
