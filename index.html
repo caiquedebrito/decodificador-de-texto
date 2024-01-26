@@ -4,35 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decodificador - Alura Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
-    <header>
-      <div>
+    <main>
+      <div id="logo">
         <img src="./assets/logo.svg" alt="Logo da Alura" />
       </div>
-    </header>
-    <main>
-      <section>
+      <section id="section-1">
         <div>
-          <textarea name="" id="text-field"></textarea>
+          <textarea name="" id="text-field" placeholder="Digite seu texto"></textarea>
         </div>
+        
         <div>
-          <span>Apenas letras minúsculas e sem acento.</span>
-        </div>
-        <div>
-          <button>Criptografar</button>
-          <button>Descriptografar</button>
+          <div id="warning">
+            <img src="./assets/info.svg" alt="">
+            <span>Apenas letras minúsculas e sem acento.</span>
+          </div>
+          <div id="button-container">
+            <button id="encrypt-button">Criptografar</button>
+            <button id="decrypt-button">Descriptografar</button>
+          </div>
         </div>
       </section>
-      <section>
+
+      <aside id="section-2">
+        <!-- <div id="result-warning">
+          
+          <img src="./assets/message-not-found-img.svg" alt="Imagem - Nenhuma mensagem encontrada" />
+          
+          <div id="caption">
+            <span id="title">Nenhuma mensagem encontrada</span>
+            <span id="info">Digite um texto que você deseja criptografar ou descriptografar.</span>
+          </div>
+        </div> -->
+
         <div id="result">
-          <img src="./assets/message-not-found-img.svg" alt="" />
-          <span>Nenhuma mensagem encontrada</span>
-          <span>Digite um texto que você deseja criptografar ou descriptografar.</span>
+          <p id="text-result">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, dolore labore velit veritatis maiores quibusdam rem earum, exercitationem reiciendis fugiat cumque ipsum expedita ducimus sint sunt perspiciatis. Facere, ea quasi?</p>
+
+          <button id="copy-btn">Copiar</button>
         </div>
-        <button id="copy-btn">Copiar</button>
-      </section>
+      </aside>
+
     </main>
-    <footer><span>@caiquedebrito</span></footer>
+    <!-- <footer><span>@caiquedebrito</span></footer> -->
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
