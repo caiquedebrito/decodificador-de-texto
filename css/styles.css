@@ -159,7 +159,8 @@ button:disabled {
 }
 
 #button-container > button {
-  width: 328px;
+  width: 100%;
+  max-width: 328px;
 }
 
 #encrypt-button {
