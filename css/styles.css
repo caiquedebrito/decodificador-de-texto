@@ -30,7 +30,7 @@ main {
   justify-content: space-between;
   gap: 80px;
   padding: 2.5rem;
-  height: 100dvh;
+  min-height: 100dvh;
 }
 
 #section-1 {
