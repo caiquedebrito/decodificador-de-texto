@@ -181,6 +181,17 @@ button:disabled {
   transition: all 0.5s ease-in-out !important;
 }
 
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+footer a {
+  color: var(--dark-blue-300);
+  text-decoration: none;
+}
+
 .hidden {
   display: none !important;
 }
